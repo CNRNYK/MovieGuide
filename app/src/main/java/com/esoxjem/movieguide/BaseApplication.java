@@ -32,7 +32,7 @@ public class BaseApplication extends Application {
         Pendo.PendoInitParams pendoParams = new Pendo.PendoInitParams();
         pendoParams.setVisitorId("John Smith");
         pendoParams.setAccountId("Acme Inc");
-
+/*
 //send Visitor Level Data
         Map<String, String> userData = new HashMap<>();
         userData.put("age", "27");
@@ -44,7 +44,7 @@ public class BaseApplication extends Application {
         accountData.put("Tier", "1");
         accountData.put("Size", "Enterprise");
         pendoParams.setAccountData(accountData);
-
+*/
 
         Pendo.initSDK(
                 this,

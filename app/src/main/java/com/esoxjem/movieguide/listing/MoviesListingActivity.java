@@ -21,9 +21,12 @@ import com.esoxjem.movieguide.util.EspressoIdlingResource;
 import com.esoxjem.movieguide.util.RxUtils;
 import com.jakewharton.rxbinding2.support.v7.widget.RxSearchView;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.disposables.Disposable;
+import sdk.pendo.io.Pendo;
 
 
 public class MoviesListingActivity extends AppCompatActivity implements MoviesListingFragment.Callback {
@@ -37,6 +40,29 @@ public class MoviesListingActivity extends AppCompatActivity implements MoviesLi
         setContentView(R.layout.activity_main);
         setToolbar();
 
+        Pendo.PendoInitParams pendoParams = new Pendo.PendoInitParams();
+        pendoParams.setVisitorId("Caner Android");
+        pendoParams.setAccountId("Acme Inc");
+/*
+//send Visitor Level Data
+        Map<String, String> userData = new HashMap<>();
+        userData.put("age", "27");
+        userData.put("country", "USA");
+        pendoParams.setUserData(userData);
+
+//send Account Level Data
+        Map<String, String> accountData = new HashMap<>();
+        accountData.put("Tier", "1");
+        accountData.put("Size", "Enterprise");
+        pendoParams.setAccountData(accountData);
+*/
+
+
+
+        Pendo.initSDK(
+                this,
+                "eyJhbGciOiJSUzI1NiIsImtpZCI6IiIsInR5cCI6IkpXVCJ9.eyJkYXRhY2VudGVyIjoidXMiLCJrZXkiOiJhNjg2YjQxYTFjZmQ1NGM4OTUzYjcxYzI4NjVkMmViYTRjMTQxZDc3MzNmMDM1YzllZDFiNTk5MDEyMWE4OGU5Yzc1MTU4MjMwZjE3Yzc4Mzk1MWU4NzE0MTViMmY5NjgxYTFkOWMwNzRmYzkxN2U5MTk4NzczY2Y5Mzg2Mjk4ZTg5MTFiMWQyMzc4NzE5YTQ2MTY4YWM5ZDRhYmIyYTQ5LmE3Yjg0YzRiNWQ4M2I3NTE4ZWIyNWZlMGJlMjJmYmM5LjhjOTU3ZGFmMGRiZmJiN2Q5YmEwMThjODBjNDlmMmUxYTFiYzkwZGJkMjIxYzYzODM4ODk1MGEwYTI5ZmRjYmMifQ.RFf8kk-2lvugNFvNCE9-bO4qqkCsE1GbOI6kGmOsHJ7wY_j0kLeIxVLN89lCSYpp5-2f8yMZonQKGhTeUyOBVKe9I4fm8I-pKIHh11kVag55q6vbulIayWwcaJMEjAbcB15xDAFhmQMTtuQEzwDIdp4Oh8QTG_9GsBvZDirUHq0",
+                pendoParams);   // call initSDK with initParams as a fourth parameter (this can be `null`).
         if (findViewById(R.id.movie_details_container) != null) {
             twoPaneMode = true;
 

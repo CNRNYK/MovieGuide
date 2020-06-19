@@ -12,6 +12,10 @@ import java.util.List;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import sdk.pendo.io.Pendo;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author arun
@@ -97,6 +101,9 @@ class MoviesListingPresenterImpl implements MoviesListingPresenter {
 
     @Override
     public void searchMovieBackPressed() {
+
+
+
         if (isLoading) {
             loadedMovies.clear();
             isLoading = false;

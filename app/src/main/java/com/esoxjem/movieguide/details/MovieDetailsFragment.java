@@ -2,15 +2,23 @@ package com.esoxjem.movieguide.details;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +28,26 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+//Test
+import android.content.Intent;
+import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.esoxjem.movieguide.Api;
@@ -27,6 +55,7 @@ import com.esoxjem.movieguide.BaseApplication;
 import com.esoxjem.movieguide.Constants;
 import com.esoxjem.movieguide.Movie;
 import com.esoxjem.movieguide.R;
+import com.esoxjem.*;
 import com.esoxjem.movieguide.Review;
 import com.esoxjem.movieguide.Video;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -40,6 +69,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import sdk.pendo.io.Pendo;
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class MovieDetailsFragment extends Fragment implements MovieDetailsView, View.OnClickListener {
     @Inject
@@ -76,6 +110,9 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     private Movie movie;
     private Unbinder unbinder;
 
+    private static final String TAG = MovieDetailsFragment.class.getSimpleName();
+
+
     public MovieDetailsFragment() {
         // Required empty public constructor
     }
@@ -93,7 +130,88 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
         ((BaseApplication) getActivity().getApplication()).createDetailsComponent().inject(this);
+
+
+
+
+
+
+/*
+        Button User1 = (Button) findViewById(R.id.user_1);
+        User1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "User 1");
+
+                Map<String, String> newUserData = new HashMap<>();
+                newUserData.put("RR1", "RR1");
+
+                Map<String, String> newAccountData = new HashMap<>();
+                newAccountData.put("RR1", "RR1");
+
+                Pendo.switchVisitor(
+                        "RR1",
+                        "RR1",
+                        newUserData,
+                        newAccountData);
+
+            }
+        });
+
+        Button User2 = (Button) getView().findViewById(R.id.user_2);
+        User2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "User 2");
+
+                Map<String, String> newUserData = new HashMap<>();
+                newUserData.put("RR2", "RR2");
+
+                Map<String, String> newAccountData = new HashMap<>();
+                newAccountData.put("RR2", "RR2");
+
+                Pendo.switchVisitor(
+                        "RR2",
+                        "RR2",
+                        newUserData,
+                        newAccountData);
+            }
+        });
+
+        Button User3 = (Button) findViewById(R.id.user_3);
+        User3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "User 3");
+
+                Map<String, String> newUserData = new HashMap<>();
+                newUserData.put("RR3", "RR3");
+
+                Map<String, String> newAccountData = new HashMap<>();
+                newAccountData.put("RR3", "RR3");
+
+                Pendo.switchVisitor(
+                        "RR3",
+                        "RR3",
+                        newUserData,
+                        newAccountData);
+            }
+        });
+*/
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -146,6 +264,10 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
         overview.setText(movie.getOverview());
         movieDetailsPresenter.showTrailers(movie);
         movieDetailsPresenter.showReviews(movie);
+
+
+
+
     }
 
     @Override
@@ -197,12 +319,23 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
                 ViewGroup reviewContainer = (ViewGroup) inflater.inflate(R.layout.review, reviewsContainer, false);
                 TextView reviewAuthor = reviewContainer.findViewById(R.id.review_author);
                 TextView reviewContent = reviewContainer.findViewById(R.id.review_content);
+
+
+
+
                 reviewAuthor.setText(review.getAuthor());
                 reviewContent.setText(review.getContent());
                 reviewContent.setOnClickListener(this);
                 reviewsContainer.addView(reviewContainer);
+
+
+
+
+
             }
         }
+
+
     }
 
     @Override
@@ -217,6 +350,18 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
 
     @OnClick(R.id.favorite)
     public void onClick(View view) {
+
+
+
+
+                HashMap<String, String> properties = new HashMap<>();
+                properties.put("key1", "value1");
+                properties.put("key2", "value2");
+                Pendo.track("Track Event", properties);
+
+
+
+
         switch (view.getId()) {
             case R.id.video_thumb:
                 onThumbnailClick(view);
@@ -251,6 +396,9 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
 
     private void onFavoriteClick() {
         movieDetailsPresenter.onFavoriteClick(movie);
+
+
+
     }
 
     @Override
@@ -264,5 +412,8 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     public void onDestroy() {
         super.onDestroy();
         ((BaseApplication) getActivity().getApplication()).releaseDetailsComponent();
+
+
+
     }
 }

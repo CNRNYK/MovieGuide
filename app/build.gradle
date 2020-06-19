@@ -2,16 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
 repositories {
+
     maven {
         url "https://software.mobile.pendo.io/artifactory/android-sdk-externals"
     }
     maven {
-        url "https://software.mobile.pendo.io/artifactory/android-release"
-    }
-    maven {
         url "https://software.mobile.pendo.io/artifactory/android-staging"
     }
-    mavenCentral()
+    maven {
+        url "https://software.mobile.pendo.io/artifactory/android-release"
+    }
 }
 
 def getProperty(String filename, String propName) {
@@ -76,7 +76,8 @@ ext {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation group:'sdk.pendo.io' , name:'pendoIO', version:'2.3.+', changing:true
+    implementation group:'sdk.pendo.io' , name:'pendoIO', version:'2.4.3.1873', changing:true
+
 
     //Support
     implementation 'com.google.android.material:material:1.1.0'

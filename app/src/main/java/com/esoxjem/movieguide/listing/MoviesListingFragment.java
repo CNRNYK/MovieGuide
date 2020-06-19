@@ -26,6 +26,7 @@ import com.google.android.material.snackbar.Snackbar;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -33,6 +34,7 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import sdk.pendo.io.Pendo;
 
 public class MoviesListingFragment extends Fragment implements MoviesListingView {
     @Inject
@@ -186,6 +188,8 @@ public class MoviesListingFragment extends Fragment implements MoviesListingView
     }
 
     public void searchViewBackButtonClicked() {
+
+
         moviesPresenter.searchMovieBackPressed();
     }
 

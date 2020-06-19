@@ -11,18 +11,25 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
+        <meta-data android:name="insert_debug_logging" android:value="true"/>
+
         <activity android:name="sdk.pendo.io.activities.PendoGateActivity" android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="pendo-38d080fb"/>
+                <data android:scheme="pendo-cd4ffb8c"/>
             </intent-filter>
             <intent-filter>
-                <action android:name="38d080fb" />
+                <action android:name="cd4ffb8c" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+
+
+
         <activity
             android:name=".listing.MoviesListingActivity"
             android:launchMode="singleTask">

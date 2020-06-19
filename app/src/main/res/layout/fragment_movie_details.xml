@@ -35,6 +35,7 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:theme="@style/AppTheme.Toolbar"/>
 
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -50,6 +51,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/user_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User 1" />
+
+            <Button
+                android:id="@+id/user_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User 2" />
+
+            <Button
+                android:id="@+id/user_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User 3" />
+
+            <Button
+                android:id="@+id/custom_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom Event" />
+
+            <TextView
+                android:id="@+id/textview_pendo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text View for analytics" />
 
             <TextView
                 android:id="@+id/movie_name"
@@ -102,11 +133,39 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@android:color/white"/>
 
+
+
+
+
+
+
+
+
+
+
+
+
             <include
                 layout="@layout/trailers_and_reviews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </LinearLayout>
 
 
