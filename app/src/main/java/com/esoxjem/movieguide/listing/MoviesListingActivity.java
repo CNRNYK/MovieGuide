@@ -58,11 +58,11 @@ public class MoviesListingActivity extends AppCompatActivity implements MoviesLi
 */
 
 
-
+/*
         Pendo.initSDK(
                 this,
                 "eyJhbGciOiJSUzI1NiIsImtpZCI6IiIsInR5cCI6IkpXVCJ9.eyJkYXRhY2VudGVyIjoidXMiLCJrZXkiOiJhNjg2YjQxYTFjZmQ1NGM4OTUzYjcxYzI4NjVkMmViYTRjMTQxZDc3MzNmMDM1YzllZDFiNTk5MDEyMWE4OGU5Yzc1MTU4MjMwZjE3Yzc4Mzk1MWU4NzE0MTViMmY5NjgxYTFkOWMwNzRmYzkxN2U5MTk4NzczY2Y5Mzg2Mjk4ZTg5MTFiMWQyMzc4NzE5YTQ2MTY4YWM5ZDRhYmIyYTQ5LmE3Yjg0YzRiNWQ4M2I3NTE4ZWIyNWZlMGJlMjJmYmM5LjhjOTU3ZGFmMGRiZmJiN2Q5YmEwMThjODBjNDlmMmUxYTFiYzkwZGJkMjIxYzYzODM4ODk1MGEwYTI5ZmRjYmMifQ.RFf8kk-2lvugNFvNCE9-bO4qqkCsE1GbOI6kGmOsHJ7wY_j0kLeIxVLN89lCSYpp5-2f8yMZonQKGhTeUyOBVKe9I4fm8I-pKIHh11kVag55q6vbulIayWwcaJMEjAbcB15xDAFhmQMTtuQEzwDIdp4Oh8QTG_9GsBvZDirUHq0",
-                pendoParams);   // call initSDK with initParams as a fourth parameter (this can be `null`).
+                pendoParams);*/   // call initSDK with initParams as a fourth parameter (this can be `null`).
         if (findViewById(R.id.movie_details_container) != null) {
             twoPaneMode = true;
 

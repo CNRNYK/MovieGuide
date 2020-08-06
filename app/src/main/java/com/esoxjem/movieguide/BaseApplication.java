@@ -30,8 +30,8 @@ public class BaseApplication extends Application {
         appComponent = createAppComponent();
 
         Pendo.PendoInitParams pendoParams = new Pendo.PendoInitParams();
-        pendoParams.setVisitorId("John Smith");
-        pendoParams.setAccountId("Acme Inc");
+        pendoParams.setVisitorId("Caner NAYKI");
+        pendoParams.setAccountId("Caner Account ID");
 /*
 //send Visitor Level Data
         Map<String, String> userData = new HashMap<>();
@@ -48,7 +48,7 @@ public class BaseApplication extends Application {
 
         Pendo.initSDK(
                 this,
-                "eyJhbGciOiJSUzI1NiIsImtpZCI6IiIsInR5cCI6IkpXVCJ9.eyJkYXRhY2VudGVyIjoidXMiLCJrZXkiOiJlZTlhMWFkY2FmMTU3OTM5MDNmODAzNTM0NDAyMmRkYjdiYzg3ODMzYThkMDk5Mzg3NjI5YjNjN2QzNjg3NTM5NmUzZTBjNzY1YWU5YTA3N2UyMDRkODcxYmFlY2RiNTZhMDUyYTA5ZmEzMjc1YTkzMzdmYzYxYTliZWZmMjYzNTU4ODE5YzJiMTU4NjYzZGMzY2EyZmZlMmM1NGMxODVkLjQzOGU3ODE4NjZmMjE2YmU0NWVjM2RkYWZiNjRiNGQzLjVhZWU4MWU2MjE5YTAxOWE1YmJkMzQyMGQ4ZTNmN2JjMjUwYzgzYTg4MGVlMTg0ZWNiZGRlZjJkYjVkZTI2ZWQifQ.nEPbqCCeaTYy6-TYNIxXUU7He4O_9EPvVaY6XlgHZEwj90KTHk0GDl6pcAV1Z_KHOOtJ5ID6qBPTdLFYMR0rj7volzNBvoWlWSPkZ18ahV-f78-FiX3KUaJryX8AzKxQ6jcz3P8SMULrjibvZ6ae0sDouKDNYWatL9dH6bXj3_E",
+                "eyJhbGciOiJSUzI1NiIsImtpZCI6IiIsInR5cCI6IkpXVCJ9.eyJkYXRhY2VudGVyIjoidXMiLCJrZXkiOiJlNDliN2VmNmYzNGY3OTAxZTJmOGQ3NzJiZTEwNmRhYTAzZTQ0Y2EwMjA2ZDE2NzBhZGY5NTk2ZmM4Mzg3MzQ0MjgyNmRiODZkNDZhMzg1ZTQxMWUwNWRhZTU4NzhiOTgyNmRkMWY5YWU5ZDkxZjAyY2YwY2M0M2U2ZGM3ZmRkODE5MzY5NWY3ZGE3ZTNhMGUzYmM2NzZhNjAyYTBkMTU0LmU2MjQ4ZmZmMDk5MTE1YzdlNjk4NWRiZDYwNjA2Y2Y2LmUyNzM3ODE4YjIxNWRlYzM0ZDQ0MjY2Mzk3NjRjMWY1Mzg1NTIzZTA5YTg4ZWZjYzhiNTY1MTU3ZDc5N2RiNjUifQ.QOYEKelYCYgEorjJaaVDouQS0sSEdQP7tlV7Ps6Eqt5L-c_HX5WlsLYklWeiA2bIiWQ0HT5OR55IJdx7GPPwsVuVRp75G03zVNDVEIPqC-_aqJXoaNDTawZc1nhjq1y6LySAulNakBbkthKi5_W_eGxn1DNL6n2NbBeiQGPcGFQ",
                 pendoParams);   // call initSDK with initParams as a fourth parameter (this can be `null`).
     }
 
