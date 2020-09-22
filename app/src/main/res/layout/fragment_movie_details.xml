@@ -70,6 +70,9 @@
                 android:layout_height="wrap_content"
                 android:text="User 3" />
 
+
+
+
             <Button
                 android:id="@+id/custom_event"
                 android:layout_width="wrap_content"
@@ -133,41 +136,13 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@android:color/white"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
             <include
                 layout="@layout/trailers_and_reviews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </LinearLayout>
-
 
     </androidx.core.widget.NestedScrollView>
 

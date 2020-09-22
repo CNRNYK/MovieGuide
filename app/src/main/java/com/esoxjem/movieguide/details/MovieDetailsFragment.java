@@ -199,16 +199,6 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
         });
 */
 
-
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -353,11 +343,11 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
 
 
 
-
-                HashMap<String, String> properties = new HashMap<>();
-                properties.put("key1", "value1");
-                properties.put("key2", "value2");
-                Pendo.track("Track Event", properties);
+//
+//                HashMap<String, String> properties = new HashMap<>();
+//                properties.put("key1", "value1");
+//                properties.put("key2", "value2");
+//                Pendo.track("Track Event", properties);
 
 
 

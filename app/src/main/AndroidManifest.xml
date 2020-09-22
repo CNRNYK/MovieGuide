@@ -19,10 +19,10 @@
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="pendo-33cbebcf"/>
+                <data android:scheme="pendo-cd4ffb8c"/>
             </intent-filter>
             <intent-filter>
-                <action android:name="33cbebcf" />
+                <action android:name="cd4ffb8c" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

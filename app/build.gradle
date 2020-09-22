@@ -38,7 +38,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 2
-        versionName "1.1"
+        versionName "1.3"
 
         buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "tmdb_api_key")}\""
         buildConfigField "String", "TMDB_BASE_URL", "\"https://api.themoviedb.org/\""
@@ -76,7 +76,7 @@ ext {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation group:'sdk.pendo.io' , name:'pendoIO', version:'2.4.3.1873', changing:true
+    implementation group:'sdk.pendo.io' , name:'pendoIO', version:'2.6.0.815', changing:true
 
 
     //Support
