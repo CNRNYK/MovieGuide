@@ -53,22 +53,22 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/user_1"
+                android:id="@+id/Clear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="User 1" />
+                android:text="Clear" />
 
             <Button
-                android:id="@+id/user_2"
+                android:id="@+id/Change"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="User 2" />
+                android:text="Change" />
 
             <Button
-                android:id="@+id/user_3"
+                android:id="@+id/Switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="User 3" />
+                android:text="Switch" />
 
 
 

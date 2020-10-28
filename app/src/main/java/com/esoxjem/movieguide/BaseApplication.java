@@ -35,18 +35,18 @@ public class BaseApplication extends Application {
 
 
 
-////send Visitor Level Data
-//        Map<String, String> userData = new HashMap<>();
-//        userData.put("age", "27");
-//        userData.put("country", "USA");
-//        pendoParams.setUserData(userData,);
-//
-////send Account Level Data
-//        Map<String, String> accountData = new HashMap<>();
-//        accountData.put("Tier", "1");
-//        accountData.put("Size", "Enterprise");
-//        pendoParams.setAccountData(accountData);
+//send Visitor Level Data
+        Map<String, String> userData = new HashMap<>();
+        userData.put("age", "27");
+        userData.put("country", "USA");
+ //       pendoParams.setUserData(userData,);
 
+//send Account Level Data
+        Map<String, String> accountData = new HashMap<>();
+        accountData.put("Tier", "1");
+        accountData.put("Size", "Enterprise");
+//        pendoParams.setAccountData();
+//
 
 
         Pendo.initSDK(

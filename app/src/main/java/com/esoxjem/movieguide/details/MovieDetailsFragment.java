@@ -111,6 +111,7 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     private Unbinder unbinder;
 
     private static final String TAG = MovieDetailsFragment.class.getSimpleName();
+    private Object List;
 
 
     public MovieDetailsFragment() {
@@ -338,6 +339,32 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
         favorite.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.ic_favorite_border_white_24dp));
     }
 
+    @OnClick(R.id.Clear)
+    public void clearEvent(View view){
+        Pendo.clearVisitor();
+    }
+    @OnClick(R.id.Change)
+    public void changeVisitor(View view){
+
+        Pendo.PendoInitParams pendoParams = new Pendo.PendoInitParams();
+        pendoParams.setVisitorId("New setted caner");
+        pendoParams.setAccountId("New Setted caner");
+    }
+
+
+    @OnClick(R.id.Switch)
+    public void switchVisitor(View view) {
+        HashMap insertAttributes = new HashMap();
+        insertAttributes.put("UserGender", "Female");
+
+
+        Pendo.switchVisitor(
+
+                "New Visitor ID",
+                "\"For both of the above API's (SetVisitor and SwitchVisitor) try to break the api by use the following: \n" +
+                        "Empty strings/extremely long strings, numbers, values in other languages, special chars, space, null, send part of the parameters that the api requires\"",insertAttributes,insertAttributes);
+    }
+
     @OnClick(R.id.favorite)
     public void onClick(View view) {
 
@@ -348,8 +375,11 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
 //                properties.put("key1", "value1");
 //                properties.put("key2", "value2");
 //                Pendo.track("Track Event", properties);
-
-
+        HashMap insertAttributes = new HashMap();
+        HashMap<String, String> properties = new HashMap<>();
+        properties.put("item", view.toString());
+        properties.put("index", String.valueOf(1));
+        Pendo.track("item_selected",insertAttributes);
 
 
         switch (view.getId()) {
