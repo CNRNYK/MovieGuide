@@ -76,7 +76,7 @@ ext {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation group:'sdk.pendo.io' , name:'pendoIO', version:'2.6.0.815', changing:true
+    implementation group:'sdk.pendo.io' , name:'pendoIO', version:'2.6.0.984', changing:true
 
 
     //Support
