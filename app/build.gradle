@@ -2,17 +2,22 @@ apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
 repositories {
-
     maven {
         url "https://software.mobile.pendo.io/artifactory/android-sdk-externals"
     }
     maven {
-        url "https://software.mobile.pendo.io/artifactory/android-staging"
-    }
-    maven {
         url "https://software.mobile.pendo.io/artifactory/android-release"
     }
+    maven {
+        url "https://software.mobile.pendo.io/artifactory/android-sdk-pendo-ci-release"
+        credentials {
+            username 'mobile-reader'
+            password 'eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJ5UUxQNjQ1UWkzemNwUy1QSTV5M3UyVHBsTmo0YVJmdV9MMUcwMHp0MlRRIn0.eyJzdWIiOiJqZnJ0QDAxZW50cHN5czZhZWJxMWt0anBkZWsxejljXC91c2Vyc1wvbW9iaWxlLXJlYWRlciIsInNjcCI6Im1lbWJlci1vZi1ncm91cHM6cmVhZGVycyBhcGk6KiIsImF1ZCI6ImpmcnRAMDFlbnRwc3lzNmFlYnExa3RqcGRlazF6OWMiLCJpc3MiOiJqZnJ0QDAxZW50cHN5czZhZWJxMWt0anBkZWsxejljXC91c2Vyc1wvbGlyYW5AcGVuZG8uaW8iLCJpYXQiOjE2MDYzMDAwNDcsImp0aSI6ImFmNDNkN2Q5LWNmZjMtNDFmNS05ZmVlLTRkMjA3M2FmNWViYSJ9.dct_1somtsTL7iKNyj3pDHzeByXqxyJ3KCghDiTGlxDqR9Gx_QKWX8ZqFtQAb83o6oIB3Jslva7enE5Okw4IquXl1-xTYCl-s_T1VGaYDK4TgAlab2TQ9T3pxle0sE5TJW5by9IffXx1nKhLCvtJR8tfcAgzAV_jNJNRcxSzJsc31Bo6wzbZE1ojEua_CoZ5yqC0Sk6TS8oaqxRFLixROZwmLog3hcpw5wra4NEQy1I5NEb_vRDTx2RPvmPqpxc639RRc9b9LadV6oXuYRvC72k2pxRWBLgcAv6KGH9y9sYw8D7kUo8aMfoWAQUUWka-AXx0-s0R5NI2HUN9_avUIg'
+        }
+    }
+    mavenCentral()
 }
+
 
 def getProperty(String filename, String propName) {
     def propsFile = rootProject.file(filename)
@@ -76,7 +81,7 @@ ext {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation group:'sdk.pendo.io' , name:'pendoIO', version:'2.6.0.984', changing:true
+    implementation group:'sdk.pendo.io' , name:'pendoIO', version:'2.7.0.1496', changing:true
 
 
     //Support
