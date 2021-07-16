@@ -69,10 +69,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import kotlin.random.URandomKt;
 import sdk.pendo.io.Pendo;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 
 public class MovieDetailsFragment extends Fragment implements MovieDetailsView, View.OnClickListener {
@@ -343,11 +345,14 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     public void clearEvent(View view){
         Pendo.clearVisitor();
     }
+
     @OnClick(R.id.Change)
     public void changeVisitor(View view){
-
+        Random rand = new Random();
+        int x = 25;
+        int j= rand.nextInt(25);
         Pendo.PendoInitParams pendoParams = new Pendo.PendoInitParams();
-        pendoParams.setVisitorId("New setted caner");
+        pendoParams.setVisitorId("New setted caner"+j);
         pendoParams.setAccountId("New Setted caner");
     }
 
@@ -356,19 +361,19 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     public void switchVisitor(View view) {
         HashMap insertAttributes = new HashMap();
         insertAttributes.put("UserGender", "Female");
-
+        Random rand = new Random();
+        int x = 25;
+        int j= rand.nextInt(25);
 
         Pendo.switchVisitor(
 
-                "New Visitor ID",
+                "New Visitor ID"+j,
                 "\"For both of the above API's (SetVisitor and SwitchVisitor) try to break the api by use the following: \n" +
                         "Empty strings/extremely long strings, numbers, values in other languages, special chars, space, null, send part of the parameters that the api requires\"",insertAttributes,insertAttributes);
     }
 
     @OnClick(R.id.favorite)
     public void onClick(View view) {
-
-
 
 //
 //                HashMap<String, String> properties = new HashMap<>();

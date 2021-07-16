@@ -25,8 +25,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <meta-data android:name="insert_debug_logging" android:value="true"/>
 
-        <meta-data android:name="pnd_debug_logging" android:value="true"/>
 
         <activity
             android:name=".listing.MoviesListingActivity"

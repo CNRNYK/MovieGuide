@@ -14,6 +14,8 @@ import sdk.pendo.io.*;
 import io.realm.Realm;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
+
 /**
  * @author arun
  */
@@ -29,9 +31,15 @@ public class BaseApplication extends Application {
         initRealm();
         appComponent = createAppComponent();
 
+        Random rand = new Random();
+        int x = 25;
+        int j= rand.nextInt(25);
+        int k= rand.nextInt(25);
+
+
         Pendo.PendoInitParams pendoParams = new Pendo.PendoInitParams();
-        pendoParams.setVisitorId("Caner NAYKI");
-        pendoParams.setAccountId("Pendo New");
+        pendoParams.setVisitorId("Caner NAYKI "+j );
+        pendoParams.setAccountId("Pendo New " +k);
 
 
 
